@@ -1,0 +1,88 @@
+.merchant-section {
+    padding: 4rem 1rem;
+    background-color: #ffffff;
+}
+
+.merchant-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.merchant-heading {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 3rem;
+    color: #1a202c;
+    font-weight: 700;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.highlight {
+    color: #0091ff;
+}
+
+.logo-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.merchant-logo {
+    max-width: 120px;
+    height: auto;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.merchant-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+.see-all-link {
+    display: inline-block;
+    color: #1a202c;
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 2rem;
+    transition: color 0.3s ease;
+}
+
+.see-all-link:hover {
+    color: #0091ff;
+}
+
+@media (max-width: 768px) {
+    .merchant-heading {
+        font-size: 2rem;
+        padding: 0 1rem;
+    }
+
+    .logo-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .merchant-heading {
+        font-size: 1.75rem;
+    }
+
+    .logo-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

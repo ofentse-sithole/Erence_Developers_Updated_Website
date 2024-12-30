@@ -1,11 +1,11 @@
 import React, { useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Navbar from './components/navbar';
+import Navbar from './components/Navbar/Navbar';
+import SplashScreen from './components/SplashScreen/SplashScreen';
 import Home from './components/pages/home';
 import Services from './components/pages/Services';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
-import SplashScreen from './components/SplashScreen';
 
 /* Adding this because of react-router-dom */
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';

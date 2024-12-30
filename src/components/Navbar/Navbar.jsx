@@ -16,7 +16,7 @@ const Navbar = () => {
                     ☰
                 </div>
                 <img
-                    src="/images/Logo.png" // Replace with your logo's path
+                    src="/images/Logo_Details.png" // Replace with your logo's path
                     alt="Logo"
                     className="navbar-logo"
                 />

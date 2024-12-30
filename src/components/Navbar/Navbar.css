@@ -123,6 +123,12 @@
 
 /* Media Queries */
 @media (max-width: 768px) {
+
+    .menu-item:hover {
+            border-bottom: 4px solid #00eeff;
+            transition: all 0.2s ease-out;
+        }
+
     .hamburger {
         display: block;
         /* Show hamburger menu on mobile */
@@ -131,6 +137,11 @@
     .navbar-right {
         display: none;
         /* Hide links on mobile */
+    }
+
+    .navbar-logo {
+        height: 110px;
+        padding-right: 20px;
     }
 }
 

@@ -2,7 +2,7 @@ import React, { useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/Navbar/Navbar';
 import SplashScreen from './components/SplashScreen/SplashScreen';
-import Home from './components/pages/home';
+import Home from './components/pages/Home';
 import Services from './components/pages/Services';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';

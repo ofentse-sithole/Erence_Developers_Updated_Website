@@ -6,6 +6,7 @@ import Home from './components/pages/Home';
 import Services from './components/pages/Services';
 import About from './components/pages/About';
 import Contact from './components/pages/Contact';
+import Order from './components/pages/Order';
 
 /* Adding this because of react-router-dom */
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -34,6 +35,7 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/order" element={<Order />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </>

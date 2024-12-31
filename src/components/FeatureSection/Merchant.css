@@ -1,6 +1,7 @@
 .merchant-section {
     padding: 4rem 1rem;
     background-color: #ffffff;
+    overflow: hidden;
 }
 
 .merchant-container {
@@ -24,19 +25,25 @@
     color: #0091ff;
 }
 
-.logo-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 2rem;
-    align-items: center;
-    margin-bottom: 2rem;
+.logo-slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 2rem 0;
+}
+
+.logo-track {
+    display: flex;
+    animation: scroll 30s linear infinite;
+    width: fit-content;
 }
 
 .logo-wrapper {
+    flex: 0 0 auto;
+    padding: 0 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
 }
 
 .merchant-logo {
@@ -65,15 +72,24 @@
     color: #0091ff;
 }
 
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 @media (max-width: 768px) {
     .merchant-heading {
         font-size: 2rem;
         padding: 0 1rem;
     }
 
-    .logo-container {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
+    .logo-track {
+        animation-duration: 20s;
     }
 }
 
@@ -82,7 +98,12 @@
         font-size: 1.75rem;
     }
 
-    .logo-container {
-        grid-template-columns: repeat(1, 1fr);
+    .logo-wrapper {
+        padding: 0 1rem;
     }
+}
+
+/* Optional: Pause animation on hover */
+.logo-slider:hover .logo-track {
+    animation-play-state: paused;
 }

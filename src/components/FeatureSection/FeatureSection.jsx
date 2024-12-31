@@ -1,23 +1,23 @@
 import React from 'react';
-import { Layers, BookOpen, Binary } from 'lucide-react';
+import { TabletSmartphone, ArrowUpDown, MonitorSmartphone  } from 'lucide-react';
 import './FeatureSection.css';
 
 const FeaturesSection = () => {
     const features = [
         {
-            title: "PERFECTLY DESIGN",
-            icon: <Binary className="feature-icon" />,
-            description: "A small river named Duden flows by their place and supplies it with the necessary regelialia."
+            title: "Web Development",
+            icon: <MonitorSmartphone className="feature-icon" />,
+            description: "We create visually stunning and user-friendly websites tailored to your needs."
         },
         {
-            title: "CAREFULLY PLANNED",
-            icon: <Layers className="feature-icon" />,
-            description: "A small river named Duden flows by their place and supplies it with the necessary regelialia."
+            title: "Mobile Development",
+            icon: <TabletSmartphone className="feature-icon" />,
+            description: "We develop intuitive mobile apps for seamless user experiences on iOS and Android."
         },
         {
-            title: "SMARTLY EXECUTE",
-            icon: <BookOpen className="feature-icon" />,
-            description: "A small river named Duden flows by their place and supplies it with the necessary regelialia."
+            title: "Web Hosting",
+            icon: <ArrowUpDown className="feature-icon" />,
+            description: "We provide reliable, secure, and fast web hosting to keep your site running smoothly."
         }
     ];
 
@@ -30,7 +30,6 @@ const FeaturesSection = () => {
                             {feature.icon}
                             <h3 className="feature-title">{feature.title}</h3>
                             <p className="feature-description">{feature.description}</p>
-                            <button className="read-more">Read more</button>
                         </div>
                     </div>
                 ))}

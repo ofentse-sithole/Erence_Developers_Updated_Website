@@ -1,0 +1,32 @@
+.mission-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #fff;
+}
+
+.mission-content {
+    background-color: #0b81c5;
+    color: white;
+    padding: 20px;
+    max-width: 500px;
+    text-align: left;
+}
+
+.mission-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.mission-description {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.mission-image img {
+    max-width: 40%;
+    height: auto;
+    object-fit: cover;
+}

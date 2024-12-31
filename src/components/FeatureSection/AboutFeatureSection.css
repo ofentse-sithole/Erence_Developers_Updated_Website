@@ -1,0 +1,150 @@
+.about-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    gap: 4rem;
+    background-color: #fff;
+    min-height: 600px;
+}
+
+.about-image-section {
+    flex: 1;
+    max-width: 500px;
+}
+
+.about-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem 0;
+}
+
+.about-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.about-name {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.pronouns {
+    font-size: 1.2rem;
+    color: #666;
+    font-weight: normal;
+}
+
+.about-title {
+    font-size: 1.25rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.about-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 2rem;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.portfolio-button {
+    background-color: #333;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.portfolio-button:hover {
+    background-color: #444;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 968px) {
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        padding: 1rem;
+    }
+
+    .about-image-section {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .about-content {
+        width: 100%;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .about-header h1 {
+        font-size: 2rem;
+    }
+
+    .about-name {
+        font-size: 1.75rem;
+    }
+
+    .about-title {
+        font-size: 1.1rem;
+    }
+
+    .about-description {
+        font-size: 1rem;
+    }
+}
+
+/* Optional animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.about-content {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .about-content {
+        animation: none;
+    }
+    
+    .portfolio-button:hover {
+        transform: none;
+    }
+}

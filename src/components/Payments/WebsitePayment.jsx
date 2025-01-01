@@ -2,34 +2,39 @@ import React from 'react';
 import './WebsitePayment.css';
 
 const Pricing = () => {
-  const handlePayment = (plan) => {
-    // PayFast integration configuration
-    const paymentData = {
-      merchant_id: plan.merchantId,
-      merchant_key: 'YOUR_MERCHANT_KEY',
-      amount: plan.price,
-      item_name: plan.name,
-      return_url: 'https://your-website.com/success',
-      cancel_url: 'https://your-website.com/cancel',
-      notify_url: 'https://your-website.com/notify',
+    const handlePayment = (plan) => {
+        // PayFast integration configuration
+        const paymentData = {
+            merchant_id: '10036480',  // Use the exact merchant ID from your dashboard
+            merchant_key: '263j380x8nogb',
+            amount: plan.price,
+            item_name: plan.name,
+            return_url: 'http://localhost:3000/success', // Change these URLs to match your development environment
+            cancel_url: 'http://localhost:3000/cancel',
+            notify_url: 'http://localhost:3000/notify',
+            email_address: '', // Add customer's email if available
+            cell_number: '', // Add customer's phone if available
+            m_payment_id: '', // Add your unique payment ID if needed
+            amount_gross: plan.price,
+            payment_method: ''
+        };
+
+        // Create and submit form to PayFast
+        const form = document.createElement('form');
+        form.method = 'POST';
+        form.action = 'https://sandbox.payfast.co.za/eng/process';
+
+        Object.entries(paymentData).forEach(([key, value]) => {
+            const input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = key;
+            input.value = value.toString(); // Convert all values to string
+            form.appendChild(input);
+        });
+
+        document.body.appendChild(form);
+        form.submit();
     };
-
-    // Create and submit form to PayFast
-    const form = document.createElement('form');
-    form.method = 'POST';
-    form.action = 'https://sandbox.payfast.co.za/eng/process';
-
-    Object.entries(paymentData).forEach(([key, value]) => {
-      const input = document.createElement('input');
-      input.type = 'hidden';
-      input.name = key;
-      input.value = value;
-      form.appendChild(input);
-    });
-
-    document.body.appendChild(form);
-    form.submit();
-  };
 
   const plans = [
     {
@@ -42,7 +47,7 @@ const Pricing = () => {
         "Basic customer support"
       ],
       buttonText: "Get Basic Website",
-      merchantId: "YOUR_MERCHANT_ID_1"
+          merchantId: "26051115"
     },
     {
       name: "Standard",
@@ -54,7 +59,7 @@ const Pricing = () => {
       ],
       buttonText: "Get Standard Website",
       isPopular: true,
-      merchantId: "YOUR_MERCHANT_ID_2"
+        merchantId: "26051115"
     },
     {
       name: "Enterprise",
@@ -68,7 +73,7 @@ const Pricing = () => {
         "Free domain name registration"
       ],
       buttonText: "Get Enterprise Website",
-      merchantId: "YOUR_MERCHANT_ID_3"
+        merchantId: "26051115"
     }
   ];
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { TabletSmartphone, ArrowUpDown, MonitorSmartphone  } from 'lucide-react';
+import { TabletSmartphone, ArrowUpDown, MonitorSmartphone } from 'lucide-react';
 import './FeatureSection.css';
 
 const FeaturesSection = () => {
@@ -22,19 +22,23 @@ const FeaturesSection = () => {
     ];
 
     return (
-        <div className="features-container">
-            <div className="features-grid">
-                {features.map((feature, index) => (
-                    <div key={index} className="feature-card">
-                        <div className="feature-content">
-                            {feature.icon}
-                            <h3 className="feature-title">{feature.title}</h3>
-                            <p className="feature-description">{feature.description}</p>
+        <section className="features-section">
+            <div className="features-container">
+                <div className="features-grid">
+                    {features.map((feature, index) => (
+                        <div key={index} className="feature-card">
+                            <div className="icon-wrapper">
+                                {feature.icon}
+                            </div>
+                            <div className="feature-content">
+                                <h3 className="feature-title">{feature.title}</h3>
+                                <p className="feature-description">{feature.description}</p>
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
-        </div>
+        </section>
     );
 };
 

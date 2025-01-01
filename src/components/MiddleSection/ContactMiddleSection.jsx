@@ -34,7 +34,11 @@ function ContactMiddleSection() {
     return (
         <div className="contact-page">
             <section className="contact-section">
-                <h3>Contact Us</h3>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+                <h2>Contact Us</h2>
                 <p>
                     We'd love to hear from you! Whether you have a question about our services, need a quote, or just want to chat about your next project, feel free to reach out.
                 </p>
@@ -42,7 +46,7 @@ function ContactMiddleSection() {
                 <div className="contact-container">
                     {/* Contact Information */}
                     <div className="contact-info">
-                        <h2>Contact Information</h2>
+                        <h3>Contact Information</h3>
                         <p><strong>Email:</strong> info@erencedevelopers.co.za</p>
                         <p><strong>Phone:</strong> +27 81 368 3808</p>
                     </div>

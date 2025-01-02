@@ -5,19 +5,19 @@ const MobilePricing = () => {
   const handlePayment = (plan) => {
     // PayFast integration configuration
     const paymentData = {
-      merchant_id: plan.merchantId,
-      merchant_key: 'YOUR_MERCHANT_KEY',
+      merchant_id: '26051115',  // Use the exact merchant ID from your dashboard
+      merchant_key: 'xwyplttj2ek54',
       amount: plan.price,
       item_name: plan.name,
-      return_url: 'https://your-website.com/success',
-      cancel_url: 'https://your-website.com/cancel',
-      notify_url: 'https://your-website.com/notify',
+      return_url: 'http://localhost:5173/success', // Change these URLs to match your development environment
+      cancel_url: 'http://localhost:5173/cancel',
+      notify_url: 'http://localhost:5173/notify',
     };
 
     // Create and submit form to PayFast
     const form = document.createElement('form');
     form.method = 'POST';
-    form.action = 'https://sandbox.payfast.co.za/eng/process';
+    form.action = 'https://www.payfast.co.za/eng/process';
 
     Object.entries(paymentData).forEach(([key, value]) => {
       const input = document.createElement('input');
@@ -34,7 +34,7 @@ const MobilePricing = () => {
   const plans = [
     {
       name: "Basic Mobile Application",
-      price: "45 000",
+      price: "35 000",
       features: [
         "Basic UI/UX design",
         "Up to 5 core features (e.g., user login, profile management, and basic notifications)",
@@ -47,7 +47,7 @@ const MobilePricing = () => {
     },
     {
       name: "Premium Mobile Application",
-      price: "85 000",
+      price: "75 000",
       features: [
         "Advanced UI/UX design with custom branding",
         "Up to 10 core features (e.g., geolocation, chat, advanced analytics, and custom dashboards)",

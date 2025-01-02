@@ -38,57 +38,43 @@ const Pricing = () => {
 
   const plans = [
     {
-      name: "Basic",
-      price: "4500",
+      name: "Website Hosting Plan",
+      price: "300",
       features: [
-        "2 Page Basic Website",
-        "Basic Theme",
+        "Free SSL Certificate",
+        "2 GB Storage",
         "Unlimited bandwidth",
-        "Basic customer support"
+        "Any Changes within Website come with the package"
       ],
-      buttonText: "Get Basic Website",
+      buttonText: "Get Website Plan",
       merchantId: "10036480"
     },
     {
-      name: "Standard",
-      price: "7000",
+      name: "Mobile Support Plan",
+      price: "450",
       features: [
-        "3 Page Standard Website",
-        "Creative Theme",
-        "Free 1 Month Website Hosting"
+        "Support via email and phone (response within 24 hours)",
+        "Update needed for website will be done",
+        "Bug fixes",
+        "Improve security for mobile application"
       ],
-      buttonText: "Get Standard Website",
+      buttonText: "Get Mobile Support Plan",
       isPopular: true,
-      merchantId: "10036480"
-    },
-    {
-      name: "Enterprise",
-      price: "9500",
-      features: [
-        "5 Plus Page Enterprise Website",
-        "Ecomerce Website",
-        "Payment Gateway Integration if required",
-        "24/7 premium customer support",
-        "Free 1 Month Website Hosting",
-        "Free domain name registration"
-      ],
-      buttonText: "Get Enterprise Website",
       merchantId: "10036480"
     }
   ];
 
   return (
     <div className="pricing-container">
-      <h1 className="pricing-title">Discover Our Web Development Plans and Pricing</h1>
+      <h1 className="pricing-title">Discover Our Hosting, Mobile Support Plans and Pricing</h1>
       <div className="pricing-cards">
         {plans.map((plan, index) => (
           <div key={index} className={`pricing-card ${plan.isPopular ? 'popular' : ''}`}>
-            {plan.isPopular && <div className="popular-badge">Most Popular</div>}
             <h2 className="plan-name">{plan.name}</h2>
             <div className="plan-price">
               <span className="currency">R</span>
               {plan.price}
-              <span className="period"> Once Off</span>
+              <span className="period"> Monthly</span>
             </div>
             <ul className="features-list">
               {plan.features.map((feature, featureIndex) => (

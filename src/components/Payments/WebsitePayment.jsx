@@ -9,8 +9,8 @@ const Pricing = () => {
             merchant_key: '263j380x8nogb',
             amount: plan.price,
             item_name: plan.name,
-            return_url: 'http://localhost:3000/success', // Change these URLs to match your development environment
-            cancel_url: 'http://localhost:3000/cancel',
+          return_url: 'http://localhost:5173/success', // Change these URLs to match your development environment
+            cancel_url: 'http://localhost:5173/cancel',
             notify_url: 'http://localhost:3000/notify',
             email_address: '', // Add customer's email if available
             cell_number: '', // Add customer's phone if available

@@ -33,26 +33,29 @@ const MobilePricing = () => {
 
   const plans = [
     {
-      name: "Basic",
-      price: "4500",
+      name: "Basic Mobile Application",
+      price: "45 000",
       features: [
-        "2 Page Basic Website",
-        "Basic Theme",
-        "Unlimited bandwidth",
-        "Basic customer support"
+        "Basic UI/UX design",
+        "Up to 5 core features (e.g., user login, profile management, and basic notifications)",
+        "Integration with one third-party API (e.g., payment gateway)",
+        "Platform: Either Android or iOS"
+
       ],
-      buttonText: "Get Basic Website",
+      buttonText: "Get Basic Mobile Application",
       merchantId: "YOUR_MERCHANT_ID_1"
     },
     {
-      name: "Standard",
-      price: "6500",
+      name: "Premium Mobile Application",
+      price: "85 000",
       features: [
-        "3 Page Standard Website",
-        "Creative Theme",
-        "Free Month Website Hosting"
+        "Advanced UI/UX design with custom branding",
+        "Up to 10 core features (e.g., geolocation, chat, advanced analytics, and custom dashboards)",
+        "Integration with multiple APIs (e.g., payment gateways, social media, and maps)",
+        "Platforms: Both Android and iOS (cross-platform development)",
+        "Deployment to app stores with optimization"
       ],
-      buttonText: "Get Standard Website",
+      buttonText: "Get Premium Mobile Application",
       isPopular: true,
       merchantId: "YOUR_MERCHANT_ID_2"
     },
@@ -61,11 +64,10 @@ const MobilePricing = () => {
 
   return (
     <div className="pricing-container">
-      <h1 className="pricing-title">Discover Our Web Hosting Plans and Pricing</h1>
+      <h1 className="pricing-title">Discover Our Mobile Application Plans</h1>
       <div className="pricing-cards">
         {plans.map((plan, index) => (
           <div key={index} className={`pricing-card ${plan.isPopular ? 'popular' : ''}`}>
-            {plan.isPopular && <div className="popular-badge">Most Popular</div>}
             <h2 className="plan-name">{plan.name}</h2>
             <div className="plan-price">
               <span className="currency">R</span>

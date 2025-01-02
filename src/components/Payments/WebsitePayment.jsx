@@ -5,13 +5,13 @@ const Pricing = () => {
     const handlePayment = (plan) => {
         // PayFast integration configuration
         const paymentData = {
-            merchant_id: '10036480',  // Use the exact merchant ID from your dashboard
-            merchant_key: '263j380x8nogb',
+          merchant_id: '26051115',  // Use the exact merchant ID from your dashboard
+          merchant_key: 'xwyplttj2ek54',
             amount: plan.price,
             item_name: plan.name,
-          return_url: 'http://localhost:5173/success', // Change these URLs to match your development environment
+            return_url: 'http://localhost:5173/success', // Change these URLs to match your development environment
             cancel_url: 'http://localhost:5173/cancel',
-            notify_url: 'http://localhost:3000/notify',
+            notify_url: 'http://localhost:5173/notify',
             email_address: '', // Add customer's email if available
             cell_number: '', // Add customer's phone if available
             m_payment_id: '', // Add your unique payment ID if needed
@@ -22,7 +22,7 @@ const Pricing = () => {
         // Create and submit form to PayFast
         const form = document.createElement('form');
         form.method = 'POST';
-        form.action = 'https://sandbox.payfast.co.za/eng/process';
+      form.action = 'https://www.payfast.co.za/eng/process';
 
         Object.entries(paymentData).forEach(([key, value]) => {
             const input = document.createElement('input');
@@ -47,7 +47,7 @@ const Pricing = () => {
         "Basic customer support"
       ],
       buttonText: "Get Basic Website",
-          merchantId: "26051115"
+      merchantId: "10036480"
     },
     {
       name: "Standard",
@@ -59,7 +59,7 @@ const Pricing = () => {
       ],
       buttonText: "Get Standard Website",
       isPopular: true,
-        merchantId: "26051115"
+      merchantId: "10036480"
     },
     {
       name: "Enterprise",
@@ -73,7 +73,7 @@ const Pricing = () => {
         "Free domain name registration"
       ],
       buttonText: "Get Enterprise Website",
-        merchantId: "26051115"
+      merchantId: "10036480"
     }
   ];
 

@@ -6,7 +6,7 @@ const MerchantShowcase = () => {
         { name: 'Tacit Group', logo: '/images-merchant/Tacit_Group_Supply_Logo.png', url: 'https://tacit-group-supply-co-yacx.vercel.app/' },
         { name: 'CargoVertex Logistics', logo: '/images-merchant/Cargovertex_Logistics_Logo.png', url: 'https://cargovertex-logistics.vercel.app/' },
         { name: 'Harvest Qoutient', logo: '/images-merchant/Harvest_Quotient_Organic_Logo.png', url: 'https://harvest-quotient.vercel.app/' },
-        { name: 'Opel Stop', logo: '/images-merchant/Opel_Stop_Logo.png', url: 'https://www.opelstop.com/' },
+        { name: 'Opel Stop', logo: '/images-merchant/Opel_Stop_Logo.png', url: 'https://www.opel-stop.vercel.app/' },
     ];
 
     // Double the merchants array to create a seamless loop
@@ -34,7 +34,7 @@ const MerchantShowcase = () => {
                     </div>
                 </div>
 
-                <a href="#" className="see-all-link">
+                <a href="/merchant" className="see-all-link">
                     See all merchants →
                 </a>
             </div>

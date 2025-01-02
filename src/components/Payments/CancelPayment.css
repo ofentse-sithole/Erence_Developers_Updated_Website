@@ -1,0 +1,258 @@
+
+
+.cancel-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2d1b69 0%, #1a103c 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    padding-top: 350px;
+    
+}
+
+.cancel-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-out;
+}
+
+.cancel-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 30px;
+    border-radius: 50%;
+    background: #dc3545;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: scaleIn 0.5s ease-out 0.5s both;
+}
+
+.xmark {
+    width: 40px;
+    height: 40px;
+    color: white;
+    animation: drawX 0.5s ease-out 1s both;
+}
+
+.cancel-title {
+    color: #dc3545;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    animation: slideUp 0.5s ease-out 0.2s both;
+}
+
+.cancel-message {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    animation: slideUp 0.5s ease-out 0.4s both;
+}
+
+.cancel-details {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    animation: slideUp 0.5s ease-out 0.6s both;
+    text-align: left;
+}
+
+.cancel-details h2 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #2d1b69;
+}
+
+.cancel-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.cancel-details li {
+    position: relative;
+    padding: 10px 10px 10px 35px;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    color: #333;
+    background: rgba(45, 27, 105, 0.05);
+    border-radius: 8px;
+    line-height: 1.5;
+}
+
+.cancel-details li::before {
+    content: "•";
+    position: absolute;
+    left: 15px;
+    color: #2d1b69;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.contact-info {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+}
+
+.contact-info p {
+    color: #555;
+    margin: 10px 0;
+    font-size: 0.95rem;
+}
+
+.cancel-actions {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: slideUp 0.5s ease-out 0.8s both;
+}
+
+.try-again-button {
+    background: #2d1b69;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.try-again-button:hover {
+    background: #1a103c;
+}
+
+.home-button {
+    background: transparent;
+    color: #2d1b69;
+    padding: 12px 30px;
+    border: 2px solid #2d1b69;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.home-button:hover {
+    background: #2d1b69;
+    color: white;
+}
+
+.support-link {
+    color: #666;
+    text-decoration: none;
+    padding: 12px 30px;
+    border: 2px solid #666;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.support-link:hover {
+    background: #666;
+    color: white;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes drawX {
+    from {
+        stroke-dashoffset: 100;
+        stroke-dasharray: 100;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 100;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 768px) {
+
+
+    
+    .cancel-container{
+        padding-top: 390px;
+    }
+
+    .cancel-card {
+        padding: 30px 20px;
+    }
+
+    .cancel-actions {
+        flex-direction: column;
+    }
+
+    .cancel-title {
+        font-size: 1.75rem;
+    }
+
+    .cancel-details h2 {
+        font-size: 1.2rem;
+    }
+
+    .cancel-details li {
+        font-size: 0.9rem;
+        padding: 8px 8px 8px 30px;
+    }
+
+    .try-again-button,
+    .home-button,
+    .support-link {
+        width: 100%;
+    }
+}
+
+@media (max-width: 360px) {
+    .cancel-card {
+        padding: 20px 15px;
+    }
+
+    .cancel-title {
+        font-size: 1.5rem;
+    }
+
+    .cancel-message {
+        font-size: 1rem;
+    }
+}

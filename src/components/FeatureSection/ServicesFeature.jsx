@@ -21,7 +21,7 @@ const FeatureServices = () => {
         },
         {
             icon: <LineChart className="service-icon" />,
-            title: "Delievery",
+            title: "Delivery Time",
             description: "Web Development: 7 to 14 days and Mobile Development: 3 to 6 Months"
         }
     ];
@@ -30,14 +30,7 @@ const FeatureServices = () => {
         <div className="feature-container">
             <div className="feature-content">
                 <div className="feature-left">
-                    <div className="image-wrapper">
-                        <img
-                            src="/images/dashboard_code.jpg"
-                            alt="Dashboard Preview"
-                            className="feature-image"
-                        />
-                        <div className="dot-pattern"></div>
-                    </div>
+                    
                 </div>
 
                 <div className="feature-right">

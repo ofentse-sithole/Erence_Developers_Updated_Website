@@ -1,0 +1,245 @@
+.success-container {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #2d1b69 0%, #1a103c 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    padding-top: 90px;
+    background-color: #2d1b69;
+}
+
+.success-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-out;
+}
+
+.success-details , h2{
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #f30505;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 30px;
+    border-radius: 50%;
+    background: #4CAF50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: scaleIn 0.5s ease-out 0.5s both;
+}
+
+.checkmark {
+    width: 40px;
+    height: 40px;
+    color: white;
+    animation: drawCheck 0.5s ease-out 1s both;
+}
+
+.success-title {
+    color: #2d1b69;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    animation: slideUp 0.5s ease-out 0.2s both;
+}
+
+.success-message {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+    animation: slideUp 0.5s ease-out 0.4s both;
+}
+
+.success-details {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    animation: slideUp 0.5s ease-out 0.6s both;
+}
+
+.success-details p {
+    color: #555;
+    margin: 10px 0;
+    font-size: 0.95rem;
+}
+
+.success-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.success-details li {
+    position: relative;
+    padding: 10px 10px 10px 35px;
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+    color: #333;
+    background: rgba(45, 27, 105, 0.05);
+    border-radius: 8px;
+    line-height: 1.5;
+}
+
+.success-details li::before {
+    content: "•";
+    position: absolute;
+    left: 15px;
+    color: #2d1b69;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.success-actions {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    animation: slideUp 0.5s ease-out 0.8s both;
+}
+
+.home-button {
+    background: #2d1b69;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.home-button:hover {
+    background: #1a103c;
+}
+
+.support-link {
+    color: #2d1b69;
+    text-decoration: none;
+    padding: 12px 30px;
+    border: 2px solid #2d1b69;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.support-link:hover {
+    background: #2d1b69;
+    color: white;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes drawCheck {
+    from {
+        stroke-dashoffset: 100;
+        stroke-dasharray: 100;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 100;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 480px) {
+    .success-card {
+        padding: 30px 20px;
+    }
+
+    .success-actions {
+        flex-direction: column;
+    }
+
+    .success-title {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .success-card {
+        padding: 20px 15px;
+    }
+
+    .success-actions {
+        flex-direction: column;
+    }
+
+    .success-title {
+        font-size: 1.5rem;
+    }
+
+    .success-details h2 {
+        font-size: 1.25rem;
+        margin: 20px 0 12px;
+    }
+
+    .success-details li {
+        font-size: 0.9rem;
+        padding: 8px 8px 8px 30px;
+        margin-bottom: 10px;
+    }
+
+    .success-details li::before {
+        left: 12px;
+    }
+}
+
+@media (max-width: 360px) {
+    .success-card {
+        padding: 15px 12px;
+    }
+
+    .success-details h2 {
+        font-size: 1.1rem;
+    }
+
+    .success-details li {
+        font-size: 0.85rem;
+        padding: 8px 8px 8px 25px;
+    }
+
+    .success-details li::before {
+        left: 10px;
+    }
+}

@@ -9,7 +9,7 @@ const NotifyPayment = () => {
         const processNotification = async () => {
             try {
                 // Simulating fetching PayFast notification
-                const response = await fetch('http://localhost:5173/api/payment-notify', {
+                const response = await fetch('http://localhost:5173/notify', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                 });

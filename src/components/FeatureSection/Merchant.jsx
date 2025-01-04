@@ -34,7 +34,7 @@ const MerchantShowcase = () => {
                     </div>
                 </div>
 
-                <a href="../Merchant/MerchantViewAll.jsx" className="see-all-link">
+                <a href="/merchant" className="see-all-link">
                     See all merchants →
                 </a>
             </div>

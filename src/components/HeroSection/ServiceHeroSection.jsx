@@ -1,7 +1,13 @@
 import styled from "styled-components";
 import backgroundImage from "../../../public/images-hero-section/ServiceHeroSection.jpg";
+import {useEffect} from "react";
 
 const ServiceHeroSection = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
     return (
         <HeroContainer>
             <Content>

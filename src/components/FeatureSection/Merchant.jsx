@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './Merchant.css';
+import {Link} from 'react-router-dom';
 
 const MerchantShowcase = () => {
     const merchants = [
@@ -34,9 +35,10 @@ const MerchantShowcase = () => {
                     </div>
                 </div>
 
-                <a href="/merchant" className="see-all-link">
+                <Link to="/merchant" className="see-all-link">
                     See all merchants →
-                </a>
+                </Link>
+
             </div>
         </section>
     );

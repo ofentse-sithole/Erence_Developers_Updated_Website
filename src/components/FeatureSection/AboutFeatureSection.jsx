@@ -1,23 +1,34 @@
 import React from 'react';
 import './AboutFeatureSection.css';
+// Import the PDF file directly
+import CompanyProfile from '../CompanyProfile/Erence-Developers-Company-Profile.pdf';
 
 const AboutSection = () => {
-    // Function to handle download
-    const handleDownload = () => {
-        // Using absolute path from the public folder
-        const pdfUrl = '/CompanyProfile/Erence-Developers-Company-Profile.pdf';
-        
-        // Create a temporary link element
-        const link = document.createElement('a');
-        link.href = pdfUrl;
-        link.setAttribute('download', 'Erence-Developers-Company-Profile.pdf');
-        
-        // Programmatically click the link
-        document.body.appendChild(link);
-        link.click();
-        
-        // Clean up
-        document.body.removeChild(link);
+    const handleDownload = async () => {
+        try {
+            // Fetch the PDF file
+            const response = await fetch(CompanyProfile);
+            const blob = await response.blob();
+
+            // Create a blob URL
+            const blobUrl = window.URL.createObjectURL(blob);
+
+            // Create a temporary link and trigger download
+            const link = document.createElement('a');
+            link.href = blobUrl;
+            link.download = 'Erence-Developers-Company-Profile.pdf';
+
+            // Trigger download
+            document.body.appendChild(link);
+            link.click();
+
+            // Clean up
+            document.body.removeChild(link);
+            window.URL.revokeObjectURL(blobUrl);
+        } catch (error) {
+            console.error('Download failed:', error);
+            alert('Sorry, there was an error downloading the file. Please try again.');
+        }
     };
 
     return (
@@ -49,12 +60,17 @@ const AboutSection = () => {
                     </p>
 
                     <div className="button-container">
-                        <button
+                        <a
                             className="portfolio-button"
-                            onClick={handleDownload}
+                            href={CompanyProfile}
+                            download="Erence-Developers-Company-Profile.pdf"
+                            onClick={(e) => {
+                                e.preventDefault();
+                                handleDownload();
+                            }}
                         >
                             Company Portfolio
-                        </button>
+                        </a>
                     </div>
                 </div>
             </div>

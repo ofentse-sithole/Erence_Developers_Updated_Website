@@ -4,10 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
     faFacebook,
     faInstagram,
-    faTwitter,
-    faYoutube
 } from '@fortawesome/free-brands-svg-icons';
 import { faAt } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -26,11 +25,11 @@ const Footer = () => {
 
             {/* Navigation Links */}
             <nav className="footer-nav">
-                <a href="/home">Home</a>
-                <a href="/service">Services</a>
-                <a href="/order">Order</a>
-                <a href="/about">About</a>
-                <a href="/contact">Contact Us</a>
+                <Link to="/home">Home</Link>
+                <Link to="/services">Services</Link>
+                <Link to="/order">Order</Link>
+                <Link to="/about">About</Link>
+                <Link to="/contact">Contact Us</Link>
             </nav>
 
             {/* Copyright */}

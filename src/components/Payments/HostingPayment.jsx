@@ -39,7 +39,7 @@ const Pricing = () => {
   const plans = [
     {
       name: "Website Hosting Plan",
-      price: "300",
+      price: 300,
       features: [
         "Free SSL Certificate",
         "2 GB Storage",
@@ -51,7 +51,7 @@ const Pricing = () => {
     },
     {
       name: "Mobile Support Plan",
-      price: "450",
+      price: 450,
       features: [
         "Support via email and phone (response within 24 hours)",
         "Update needed for website will be done",
@@ -63,18 +63,19 @@ const Pricing = () => {
       merchantId: "10036480"
     }
   ];
+  // Helper function to format numbers with spaces
+  const formatPrice = (price) => price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
 
   return (
     <div className="pricing-container">
-      <h1 className="pricing-title">Discover Our Hosting, Mobile Support Plans and Pricing</h1>
+      <h1 className="pricing-title">Discover Our Web Development Plans and Pricing</h1>
       <div className="pricing-cards">
         {plans.map((plan, index) => (
           <div key={index} className={`pricing-card ${plan.isPopular ? 'popular' : ''}`}>
+            {plan.isPopular && <div className="popular-badge">Most Popular</div>}
             <h2 className="plan-name">{plan.name}</h2>
             <div className="plan-price">
-              <span className="currency">R</span>
-              {plan.price}
-              <span className="period"> Monthly</span>
+              R{formatPrice(plan.price)} <span className="period">Once Off</span>
             </div>
             <ul className="features-list">
               {plan.features.map((feature, featureIndex) => (
@@ -84,7 +85,7 @@ const Pricing = () => {
                 </li>
               ))}
             </ul>
-            <button 
+            <button
               className="plan-button"
               onClick={() => handlePayment(plan)}
             >

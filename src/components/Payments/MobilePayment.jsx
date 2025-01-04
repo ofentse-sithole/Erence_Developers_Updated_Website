@@ -34,7 +34,7 @@ const MobilePricing = () => {
   const plans = [
     {
       name: "Basic Mobile Application",
-      price: "35 000",
+      price: 35000,
       features: [
         "Basic UI/UX design",
         "Up to 5 core features (e.g., user login, profile management, and basic notifications)",
@@ -47,7 +47,7 @@ const MobilePricing = () => {
     },
     {
       name: "Premium Mobile Application",
-      price: "75 000",
+      price: 55000,
       features: [
         "Advanced UI/UX design with custom branding",
         "Up to 10 core features (e.g., geolocation, chat, advanced analytics, and custom dashboards)",
@@ -62,17 +62,19 @@ const MobilePricing = () => {
     
   ];
 
+  // Helper function to format numbers with spaces
+  const formatPrice = (price) => price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+
   return (
     <div className="pricing-container">
-      <h1 className="pricing-title">Discover Our Mobile Application Plans</h1>
+      <h1 className="pricing-title">Discover Our Web Development Plans and Pricing</h1>
       <div className="pricing-cards">
         {plans.map((plan, index) => (
           <div key={index} className={`pricing-card ${plan.isPopular ? 'popular' : ''}`}>
+            {plan.isPopular && <div className="popular-badge">Most Popular</div>}
             <h2 className="plan-name">{plan.name}</h2>
             <div className="plan-price">
-              <span className="currency">R</span>
-              {plan.price}
-              <span className="period">Once Off</span>
+              R{formatPrice(plan.price)} <span className="period">Once Off</span>
             </div>
             <ul className="features-list">
               {plan.features.map((feature, featureIndex) => (
@@ -82,7 +84,7 @@ const MobilePricing = () => {
                 </li>
               ))}
             </ul>
-            <button 
+            <button
               className="plan-button"
               onClick={() => handlePayment(plan)}
             >

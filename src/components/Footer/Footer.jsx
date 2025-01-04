@@ -5,7 +5,6 @@ import {
     faFacebook,
     faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
-import { faAt } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
@@ -34,7 +33,7 @@ const Footer = () => {
 
             {/* Copyright */}
             <div className="copyright">
-                <p>Copyright ©{currentYear}, <span>Erence Developers</span></p>
+                <p>Copyright ©{currentYear}  <span>Erence Developers</span></p>
             </div>
         </footer>
     );

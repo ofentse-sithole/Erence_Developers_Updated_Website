@@ -67,7 +67,7 @@
     content: "✓";
     position: absolute;
     left: 0;
-    color: #4CAF50;
+    color: #2563eb;
 }
 
 .services-section {
@@ -112,7 +112,7 @@
 .service-icon {
     width: 24px;
     height: 24px;
-    color: #4CAF50;
+    color: #2563eb;
 }
 
 .service-title {

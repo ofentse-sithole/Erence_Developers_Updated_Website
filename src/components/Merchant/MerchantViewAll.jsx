@@ -1,5 +1,6 @@
 import React from 'react';
 import './MerchantViewAll.css';
+import Footer from '../Footer/Footer';
 
 const MerchantViewAll = () => {
   const clients = [
@@ -27,8 +28,11 @@ const MerchantViewAll = () => {
   ];
 
     return (
+        <div>
         <section className="logo-section" style={{ marginTop: 0, paddingTop: 0 }}>
             <div className="text-center mb-8">
+                <br />
+                <br />
                 <p className="header-text">WE CRAFT DIGITAL EXCELLENCE</p>
                 <h2 className="heading">
                     Trusted by <span className="highlight">our clients</span>
@@ -52,7 +56,10 @@ const MerchantViewAll = () => {
                     </a>
                 ))}
             </div>
+            <br/>
+            <br/>
         </section>
+            <Footer /></div>
     );
 };
 export default MerchantViewAll;

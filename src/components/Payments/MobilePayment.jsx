@@ -77,7 +77,7 @@ const MobilePricing = () => {
             <ul className="features-list">
               {plan.features.map((feature, featureIndex) => (
                 <li key={featureIndex}>
-                  <span className="checkmark">✓</span>
+                  <span className="check-mark">✓</span>
                   {feature}
                 </li>
               ))}

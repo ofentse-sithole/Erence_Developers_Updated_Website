@@ -53,7 +53,7 @@
 }
 
 .logo {
-  max-height: 4rem;
+  max-height: 6rem;
   width: auto;
   object-fit: contain;
 }
@@ -74,6 +74,6 @@
   }
 
   .logo {
-    max-height: 3rem;
+    max-height: 5rem;
   }
 }

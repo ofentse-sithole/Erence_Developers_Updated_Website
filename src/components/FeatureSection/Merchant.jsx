@@ -14,6 +14,7 @@ const MerchantShowcase = () => {
     const duplicatedMerchants = [...merchants, ...merchants];
 
     return (
+        
         <section className="merchant-section">
             <div className="merchant-container">
                 <h1 className="merchant-heading">

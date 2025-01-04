@@ -1,41 +1,57 @@
-/* General styles for the Contact page */
 * {
     box-sizing: border-box;
-    /* Ensures consistent sizing across all elements */
 }
 
 .contact-page {
     background-color: #fff;
-    /* White background for the entire page */
     width: 100%;
     min-height: 100vh;
-    /* Full viewport height */
     padding: 40px 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
-    /* Include padding in width and height */
 }
 
 .contact-container {
     display: flex;
-    flex-direction: column;
-    /* Stack elements on small screens */
+    flex-direction: row;
+    /* Changed to row for desktop layout */
     align-items: flex-start;
     margin-top: 20px;
-    gap: 20px;
+    gap: 40px;
+    /* Increased gap for better spacing */
     background-color: white;
     box-sizing: border-box;
+    width: 100%;
 }
 
-.contact-info,
+.contact-section h2 {
+    color: #007bff;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.contact-info {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 30%;
+    /* Set width for desktop */
+    box-sizing: border-box;
+    position: sticky;
+    top: 20px;
+    /* Keeps the contact info visible while scrolling */
+}
+
 .contact-form {
     background-color: #f9f9f9;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    width: 100%;
+    width: 70%;
+    /* Set width for desktop */
     box-sizing: border-box;
 }
 
@@ -50,16 +66,14 @@
 /* Section Styles */
 .contact-section {
     width: 100%;
-    max-width: 800px;
-    /* Limit the maximum width for better readability */
+    max-width: 1200px;
+    /* Increased max-width to accommodate side-by-side layout */
     padding: 40px 20px;
     text-align: center;
     margin-bottom: 40px;
-    background-color: #ffffff;
+    background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow for depth */
     border-radius: 8px;
-    /* Rounded corners */
 }
 
 /* Heading styles */
@@ -130,6 +144,17 @@ textarea {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        /* Stack elements on mobile */
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+        /* Full width on mobile */
+    }
+
     .contact-section {
         padding: 20px;
     }

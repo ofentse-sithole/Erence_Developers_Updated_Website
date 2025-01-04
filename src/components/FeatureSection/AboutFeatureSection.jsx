@@ -2,6 +2,24 @@ import React from 'react';
 import './AboutFeatureSection.css';
 
 const AboutSection = () => {
+    // Function to handle download
+    const handleDownload = () => {
+        // Using absolute path from the public folder
+        const pdfUrl = '/CompanyProfile/Erence-Developers-Company-Profile.pdf';
+        
+        // Create a temporary link element
+        const link = document.createElement('a');
+        link.href = pdfUrl;
+        link.setAttribute('download', 'Erence-Developers-Company-Profile.pdf');
+        
+        // Programmatically click the link
+        document.body.appendChild(link);
+        link.click();
+        
+        // Clean up
+        document.body.removeChild(link);
+    };
+
     return (
         <div className="about-container">
             <div className="about-image-section">
@@ -26,18 +44,17 @@ const AboutSection = () => {
                         our mission is to turn your ideas into impactful realities. Driven
                         by creativity, technical expertise, and a passion for excellence,
                         we aim to build long-term partnerships by offering personalized services
-                        that meet your unique needs. Together, let’s create a digital presence
+                        that meet your unique needs. Together, let's create a digital presence
                         that stands out and drives success.
                     </p>
 
                     <div className="button-container">
-                        <a
+                        <button
                             className="portfolio-button"
-                            href="../CompanyProfile/Erence-Developers-Company-Profile.pdf"
-                            download="Erence-Developers-Company-Profile.pdf"
+                            onClick={handleDownload}
                         >
                             Company Portfolio
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>

@@ -1,9 +1,14 @@
-import React, { useRef } from 'react';
+import React, { useRef, useEffect } from 'react';
 import emailjs from 'emailjs-com';
 import './ContactMiddleSection.css';
 import sendSound from '../sound/send-sound.mp3';
 
 function ContactMiddleSection() {
+
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     const form = useRef();
 
     // Function to play sound

@@ -68,7 +68,7 @@ const Pricing = () => {
 
   return (
     <div className="pricing-container">
-      <h1 className="pricing-title">Discover Our Web Development Plans and Pricing</h1>
+      <h1 className="pricing-title">Discover Our Web Development, Mobile Development Plans and Pricing</h1>
       <div className="pricing-cards">
         {plans.map((plan, index) => (
           <div key={index} className={`pricing-card ${plan.isPopular ? 'popular' : ''}`}>

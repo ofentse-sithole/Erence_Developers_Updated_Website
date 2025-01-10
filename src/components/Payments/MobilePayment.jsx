@@ -71,7 +71,6 @@ const MobilePricing = () => {
       <div className="pricing-cards">
         {plans.map((plan, index) => (
           <div key={index} className={`pricing-card ${plan.isPopular ? 'popular' : ''}`}>
-            {plan.isPopular && <div className="popular-badge">Most Popular</div>}
             <h2 className="plan-name">{plan.name}</h2>
             <div className="plan-price">
               R{formatPrice(plan.price)} <span className="period">Once Off</span>

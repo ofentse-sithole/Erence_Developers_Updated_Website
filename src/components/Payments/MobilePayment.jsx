@@ -9,9 +9,9 @@ const MobilePricing = () => {
       merchant_key: 'xwyplttj2ek54',
       amount: plan.price,
       item_name: plan.name,
-      return_url: 'http://localhost:5173/success', // Change these URLs to match your development environment
-      cancel_url: 'http://localhost:5173/cancel',
-      notify_url: 'http://localhost:5173/notify',
+      return_url: 'http://www.erencedevelopers.co.za/success', // Change these URLs to match your development environment
+      cancel_url: 'http://www.erencedevelopers.co.za/cancel',
+      notify_url: 'http://www.erencedevelopers.co.za/notify',
     };
 
     // Create and submit form to PayFast

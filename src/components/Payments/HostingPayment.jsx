@@ -9,9 +9,9 @@ const Pricing = () => {
           merchant_key: 'xwyplttj2ek54',
             amount: plan.price,
             item_name: plan.name,
-            return_url: 'http://localhost:5173/success', // Change these URLs to match your development environment
-            cancel_url: 'http://localhost:5173/cancel',
-            notify_url: 'http://localhost:5173/notify',
+            return_url: 'http://www.erencedevelopers.co.za/success', // Change these URLs to match your development environment
+            cancel_url: 'http://www.erencedevelopers.co.za/cancel',
+            notify_url: 'http://www.erencedevelopers.co.za/notify',
             email_address: '', // Add customer's email if available
             cell_number: '', // Add customer's phone if available
             m_payment_id: '', // Add your unique payment ID if needed
@@ -72,10 +72,9 @@ const Pricing = () => {
       <div className="pricing-cards">
         {plans.map((plan, index) => (
           <div key={index} className={`pricing-card ${plan.isPopular ? 'popular' : ''}`}>
-            {plan.isPopular && <div className="popular-badge">Most Popular</div>}
             <h2 className="plan-name">{plan.name}</h2>
             <div className="plan-price">
-              R{formatPrice(plan.price)} <span className="period">Once Off</span>
+              R{formatPrice(plan.price)} <span className="period">Monthly</span>
             </div>
             <ul className="features-list">
               {plan.features.map((feature, featureIndex) => (

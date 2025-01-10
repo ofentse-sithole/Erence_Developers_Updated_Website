@@ -8,9 +8,9 @@ const Pricing = () => {
       merchant_key: 'xwyplttj2ek54',
       amount: plan.price, // Use the raw numeric price
       item_name: plan.name,
-      return_url: 'http://localhost:5173/success',
-      cancel_url: 'http://localhost:5173/cancel',
-      notify_url: 'http://localhost:5173/notify',
+      return_url: 'http://www.erencedevelopers.co.za/success',
+      cancel_url: 'http://www.erencedevelopers.co.za/cancel',
+      notify_url: 'http://www.erencedevelopers.co.za/notify',
     };
 
     const form = document.createElement('form');

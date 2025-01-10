@@ -11,6 +11,8 @@
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    overflow-y: auto;
 }
 
 .contact-container {

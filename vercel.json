@@ -3,6 +3,42 @@
         {
             "src": "/(.*)",
             "dest": "/index.html"
+        },
+        {
+            "src": "/cancel",
+            "dest": "/"
+        },
+        {
+            "src": "/success",
+            "dest": "/"
+        },
+        {
+            "src": "/notify",
+            "dest": "/"
+        },
+        {
+            "src": "/order",
+            "dest": "/"
+        },
+        {
+            "src": "/home",
+            "dest": "/"
+        },
+        {
+            "src": "/services",
+            "dest": "/"
+        },
+        {
+            "src": "/about",
+            "dest": "/"
+        },
+        {
+            "src": "/merchant",
+            "dest": "/"
+        },
+        {
+            "src": "/contact",
+            "dest": "/"
         }
     ]
 }

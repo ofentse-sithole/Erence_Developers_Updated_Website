@@ -44,7 +44,7 @@ const Pricing = () => {
       name: "Standard",
       price: 7500, // Numeric price
       features: [
-        "3 well-structured pages",
+        "4 well-structured pages",
         "Responsive design for all devices",
         "Advanced SEO setup",
         "Custom contact and feedback forms",

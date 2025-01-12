@@ -9,9 +9,9 @@ const Pricing = () => {
           merchant_key: 'xwyplttj2ek54',
             amount: plan.price,
             item_name: plan.name,
-            return_url: 'http://www.erencedevelopers.co.za/success', // Change these URLs to match your development environment
-            cancel_url: 'http://www.erencedevelopers.co.za/cancel',
-            notify_url: 'http://www.erencedevelopers.co.za/notify',
+            return_url: 'https://www.erencedevelopers.co.za/success', // Change these URLs to match your development environment
+            cancel_url: 'https://www.erencedevelopers.co.za/cancel',
+            notify_url: 'https://www.erencedevelopers.co.za/notify',
             email_address: '', // Add customer's email if available
             cell_number: '', // Add customer's phone if available
             m_payment_id: '', // Add your unique payment ID if needed

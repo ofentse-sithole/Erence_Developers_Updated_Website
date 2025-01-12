@@ -11,6 +11,9 @@ const SuccessPayment = () => {
 
     return (
         <div className="success-container">
+        <br/>
+        <br/>
+        <br/>
             <div className="success-card">
                 <div className="success-icon">
                     <svg viewBox="0 0 24 24" className="checkmark">

@@ -18,7 +18,6 @@ const CancelPayment = () => {
         <br/>
         <br/>
         <br/>
-        <br/>
             <div className="cancel-card">
                 <div className="cancel-icon">
                     <svg

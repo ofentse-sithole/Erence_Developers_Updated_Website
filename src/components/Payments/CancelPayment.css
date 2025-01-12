@@ -11,7 +11,7 @@
 }
 
 .cancel-card {
-    background: linear-gradient(135deg, #2d1b69 0%, #1a103c 100%);
+    background: linear-gradient(135deg, rgb(16, 58, 91) 0%, #103a3c 100%);
     border-radius: 20px;
     padding: 40px;
     text-align: center;

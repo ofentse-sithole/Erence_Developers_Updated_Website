@@ -2,7 +2,6 @@
 
 .cancel-container {
     min-height: 100vh;
-    background: linear-gradient(135deg, #2d1b69 0%, #1a103c 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -12,7 +11,7 @@
 }
 
 .cancel-card {
-    background: rgba(255, 255, 255, 0.95);
+    background: linear-gradient(135deg, #2d1b69 0%, #1a103c 100%);
     border-radius: 20px;
     padding: 40px;
     text-align: center;

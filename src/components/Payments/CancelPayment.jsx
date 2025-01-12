@@ -15,6 +15,10 @@ const CancelPayment = () => {
 
     return (
         <div className="cancel-container">
+        <br/>
+        <br/>
+        <br/>
+        <br/>
             <div className="cancel-card">
                 <div className="cancel-icon">
                     <svg
@@ -40,12 +44,6 @@ const CancelPayment = () => {
                         <li>Contact our support team for assistance</li>
                         <li>Check our FAQs for common payment issues</li>
                     </ul>
-
-                    <div className="contact-info">
-                        <p>Need help? Contact us at:</p>
-                        <p>Email: info@erencedevelopers.co.za</p>
-                        <p>Phone: +27 81 368 3808</p>
-                    </div>
                 </div>
                 <div className="cancel-actions">
                     <button onClick={handleTryAgain} className="try-again-button">

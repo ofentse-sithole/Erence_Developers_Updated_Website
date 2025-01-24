@@ -1,6 +1,6 @@
 import {useEffect} from "react";
 import styled from "styled-components";
-import backgroundImage from "../../../public/images-hero-section/OrderHeroSectionReformed.jpg";
+import backgroundImage from "../../../public/images-hero-section/OrderHeroSectionReformed1.jpg";
 
 const AboutHeroSection = () => {
 

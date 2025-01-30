@@ -36,7 +36,7 @@ const MerchantShowcase = () => {
                     </div>
                 </div>
 
-                <Link to="/merchant" className="see-all-link">
+                <Link to="/projects" className="see-all-link">
                     See our projects →
                 </Link>
 

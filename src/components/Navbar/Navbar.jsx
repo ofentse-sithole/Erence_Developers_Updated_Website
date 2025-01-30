@@ -27,10 +27,13 @@ const Navbar = () => {
                                 Home
                             </Link>
                         </li>
-                        <li className="navbar-link">
-                            <Link to="/services" className="nav-links" >
+                        <li className="navbar-link dropdown">
+                            <Link to="/services" className="nav-links">
                                 Services
                             </Link>
+                            <div className="dropdown-content">
+                                <Link to="projects">Our Projects</Link>
+                            </div>
                         </li>
                         <li className="navbar-link" >
                             <Link to="/order" className="nav-links"  >
@@ -63,6 +66,11 @@ const Navbar = () => {
                     <li className="menu-item">
                         <Link to="/services" className="nav-links">
                             Services
+                        </Link>
+                    </li>
+                    <li className="menu-item">
+                        <Link to="/projects" className="nav-links">
+                            Our Projects
                         </Link>
                     </li>
                     <li className="menu-item">

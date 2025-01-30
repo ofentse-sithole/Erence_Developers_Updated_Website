@@ -43,7 +43,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path='/success' element={<SuccessOrder />} />
             <Route path='/cancel' element={<CancelOrder />} />
-            <Route path='/merchant' element={<Merchant />} />
+            <Route path='/projects' element={<Merchant />} />
             <Route path='/notify' element={<Notify />} />
           </Routes>
         </>

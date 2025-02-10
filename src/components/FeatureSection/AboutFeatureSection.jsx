@@ -4,33 +4,6 @@ import './AboutFeatureSection.css';
 import CompanyProfile from '../CompanyProfile/Erence-Developers-Company-Profile.pdf';
 
 const AboutSection = () => {
-    const handleDownload = async () => {
-        try {
-            // Fetch the PDF file
-            const response = await fetch(CompanyProfile);
-            const blob = await response.blob();
-
-            // Create a blob URL
-            const blobUrl = window.URL.createObjectURL(blob);
-
-            // Create a temporary link and trigger download
-            const link = document.createElement('a');
-            link.href = blobUrl;
-            link.download = 'Erence-Developers-Company-Profile.pdf';
-
-            // Trigger download
-            document.body.appendChild(link);
-            link.click();
-
-            // Clean up
-            document.body.removeChild(link);
-            window.URL.revokeObjectURL(blobUrl);
-        } catch (error) {
-            console.error('Download failed:', error);
-            alert('Sorry, there was an error downloading the file. Please try again.');
-        }
-    };
-
     return (
         <div className="about-container">
             <div className="about-image-section">
@@ -62,12 +35,9 @@ const AboutSection = () => {
                     <div className="button-container">
                         <a
                             className="portfolio-button"
-                            href={CompanyProfile}
-                            download="Erence-Developers-Company-Profile.pdf"
-                            onClick={(e) => {
-                                e.preventDefault();
-                                handleDownload();
-                            }}
+                            href={CompanyProfile} // Link to PDF
+                            target="_blank" // Open in a new tab
+                            rel="noopener noreferrer" // For security reasons
                         >
                             Company Portfolio
                         </a>

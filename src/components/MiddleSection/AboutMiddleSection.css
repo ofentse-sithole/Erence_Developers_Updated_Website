@@ -1,17 +1,29 @@
-.mission-container {
+/* AboutMiddleSection.css */
+.sections-wrapper {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-direction: row;
+    gap: 20px;
     padding: 20px;
     background-color: #fff;
+    justify-content: center;
+    flex-wrap: nowrap;
+}
+
+.mission-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
 }
 
 .mission-content {
-    background-color: #0b81c5;
+    background-color: #0881c7;
     color: white;
     padding: 20px;
-    max-width: 500px;
+    width: 100%;
     text-align: left;
+    border-radius: 8px;
+    height: 100%;
 }
 
 .mission-title {
@@ -23,10 +35,25 @@
 .mission-description {
     font-size: 1rem;
     line-height: 1.5;
+    color: black;
 }
 
-.mission-image img {
-    max-width: 40%;
-    height: auto;
-    object-fit: cover;
+/* Mobile responsiveness */
+@media screen and (max-width: 768px) {
+    .sections-wrapper {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .mission-container {
+        max-width: 500px;
+    }
+    
+    .mission-content {
+        margin: 0 10px;
+    }
+    
+    .mission-title {
+        font-size: 1.5rem;
+    }
 }

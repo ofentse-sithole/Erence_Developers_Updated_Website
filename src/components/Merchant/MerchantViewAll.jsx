@@ -22,7 +22,7 @@ const MerchantViewAll = () => {
       {
           name: 'Tacit Group Supply co. Logo',
           logo: '/images-merchant/Tacit_Group_Supply_Logo.png',
-          url: 'https://tacit-group-supply-co-yacx.vercel.app/'
+          url: 'https://tacit-group-supply.vercel.app/'
       }
   
   ];

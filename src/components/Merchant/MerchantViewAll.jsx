@@ -5,6 +5,11 @@ import Footer from '../Footer/Footer';
 const MerchantViewAll = () => {
   const clients = [
     {
+          name: 'Tacit Group Supply co. Logo',
+          logo: '/images-merchant/Tacit_Group_Supply_Logo.png',
+          url: 'https://tacit-group-supply.vercel.app/'
+      },
+    {
       name: 'Cargovertex Logistics Logo',
       logo: '/images-merchant/Cargovertex_Logistics_Logo.png',
           url: 'https://cargovertex-logistics.vercel.app/'
@@ -18,12 +23,8 @@ const MerchantViewAll = () => {
       name: 'Opel Stop Logo',
       logo: '/images-merchant/Opel_Stop_Logo.png',
         url: 'https://www.opel-stop.vercel.app/'
-    },
-      {
-          name: 'Tacit Group Supply co. Logo',
-          logo: '/images-merchant/Tacit_Group_Supply_Logo.png',
-          url: 'https://tacit-group-supply.vercel.app/'
-      }
+    }
+      
   
   ];
 

@@ -42,7 +42,7 @@ const Pricing = () => {
     },
     {
       name: "Standard",
-      price: 7500, // Numeric price
+      price: 7000, // Numeric price
       features: [
         "4 well-structured pages",
         "Responsive design for all devices",
@@ -56,7 +56,7 @@ const Pricing = () => {
     },
     {
       name: "Premium",
-      price: 10500, // Numeric price
+      price: 9000, // Numeric price
       features: [
         "5+ customized pages",
         "E-commerce functionality (online store)",

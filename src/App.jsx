@@ -11,6 +11,7 @@ import SuccessOrder from './components/Payments/SuccessPayment';
 import CancelOrder from './components/Payments/CancelPayment';
 import Merchant from './components/Merchant/MerchantViewAll';
 import Notify from './components/Payments/NotifyPayment';
+import Sale from './components/pages/Sale';
 
 /* Adding this because of react-router-dom */
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -45,6 +46,7 @@ function App() {
             <Route path='/cancel' element={<CancelOrder />} />
             <Route path='/projects' element={<Merchant />} />
             <Route path='/notify' element={<Notify />} />
+            <Route path='/sale' element={<Sale/>}/>
           </Routes>
         </>
       )}
